@@ -33,7 +33,7 @@
 
 ### Linux / Mac
 ```bash
-git clone https://github.com/YOUR_USERNAME/kizuna-x.git
+git clone https://github.com/mohmmadsedeg30-design/kizuna-x.git
 cd kizuna-x
 pip install -r requirements.txt
 python3 kizuna_x.py
@@ -42,7 +42,7 @@ python3 kizuna_x.py
 ### Termux (Android)
 ```bash
 pkg update && pkg install python git
-git clone https://github.com/YOUR_USERNAME/kizuna-x.git
+git clone https://github.com/mohmmadsedeg30-design/kizuna-x.git
 cd kizuna-x
 pip install -r requirements.txt
 python kizuna_x.py
@@ -50,7 +50,7 @@ python kizuna_x.py
 
 ### Windows
 ```bash
-git clone https://github.com/YOUR_USERNAME/kizuna-x.git
+git clone https://github.com/mohmmadsedeg30-design/kizuna-x.git
 cd kizuna-x
 pip install -r requirements.txt
 python kizuna_x.py
