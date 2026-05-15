@@ -35,7 +35,7 @@
 ```bash
 git clone https://github.com/mohmmadsedeg30-design/Information-gathering-Kizuna.git
 cd Information-gathering-Kizuna
-pip install -r requirements.txt
+pip install -r requirements.txt --break-system-packages
 python3 kizuna_x.py
 ```
 
@@ -44,7 +44,7 @@ python3 kizuna_x.py
 pkg update && pkg install python git
 git clone https://github.com/mohmmadsedeg30-design/Information-gathering-Kizuna.git
 cd Information-gathering-Kizuna
-pip install -r requirements.txt
+pip install -r requirements.txt --break-system-packages
 python kizuna_x.py
 ```
 
@@ -52,7 +52,7 @@ python kizuna_x.py
 ```bash
 git clone https://github.com/mohmmadsedeg30-design/Information-gathering-Kizuna.git
 cd Information-gathering-Kizuna
-pip install -r requirements.txt
+pip install -r requirements.txt --break-system-packages
 python kizuna_x.py
 ```
 
@@ -67,12 +67,29 @@ dnspython
 email-validator
 rich
 python-whois
+python-dotenv
 ```
 
 التثبيت اليدوي:
 ```bash
-pip install requests phonenumbers dnspython email-validator rich python-whois
+pip install requests phonenumbers dnspython email-validator rich python-whois python-dotenv --break-system-packages
 ```
+
+---
+
+## إعداد API Keys (اختياري)
+
+```bash
+cp .env.example .env
+```
+
+افتح `.env` وأضف مفاتيحك:
+
+| المتغير | الاستخدام | الرابط |
+|---------|-----------|--------|
+| `NUMVERIFY_API_KEY` | تفاصيل إضافية للهاتف | [numverify.com](https://numverify.com) |
+
+> الأداة تعمل بدون API keys — تضيفها فقط لمعلومات إضافية.
 
 ---
 
