@@ -1,4 +1,4 @@
-# KIZUNA X — OSINT Framework
+# 💀 KIZUNA X — Advanced OSINT Framework v4.0 (HELL EDITION)
 
 ```
 ██╗  ██╗██╗███████╗██╗   ██╗███╗   ██╗ █████╗
@@ -7,109 +7,54 @@
 ██╔═██╗ ██║ ███╔╝  ██║   ██║██║╚██╗██║██╔══██║
 ██║  ██╗██║███████╗╚██████╔╝██║ ╚████║██║  ██║
 ╚═╝  ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝
-        OSINT FRAMEWORK  ·  v2.0
+        HELL EDITION  ·  v4.0  ·  STAY SCARY
 ```
 
-> أداة استطلاع وجمع معلومات مفتوحة المصدر مبنية بـ Python
+> **KIZUNA X** ليس مجرد أداة، بل هو وحش OSINT متكامل تم تطويره ليكون الأقوى في جمع المعلومات الاستخباراتية من المصادر المفتوحة.
 
 ---
 
-## الوحدات
-
-| # | الوحدة | الوصف |
-|---|--------|-------|
-| 1 | 📱 Phone OSINT | تحليل أرقام الهاتف — الدولة، الشبكة، النوع، التوقيت |
-| 2 | 📧 Email OSINT | التحقق من الإيميل + سجلات MX / SPF / DMARC |
-| 3 | 🌐 Domain OSINT | WHOIS + سجلات DNS كاملة |
-| 4 | 🔍 IP OSINT | الموقع الجغرافي، ISP، ASN، Proxy Detection |
-| 5 | 🔌 Port Scanner | فحص المنافذ المفتوحة (على أنظمتك فقط) |
-| 6 | 🔑 Hash Tools | توليد ومقارنة الهاش (MD5, SHA1, SHA256…) |
-| 7 | 💻 System Info | معلومات الجهاز والـ IP المحلي والعام |
-| 8 | 📡 DNS Deep Scan | استعلام شامل لجميع أنواع سجلات DNS |
+## 🧛 الميزات الجديدة في الإصدار 4.0
+- **Username Deep Scan:** محرك بحث متزامن (Asynchronous) يبحث في أكثر من 70 موقع تواصل اجتماعي ومنصة تقنية في ثوانٍ معدودة.
+- **Horror UI:** واجهة مستخدم مرعبة مع تأثيرات Matrix (أرقام خضراء) ونصوص متوهجة تشعرك بقوة الاختراق.
+- **Email Intel:** فحص عميق لسجلات MX وكشف التسريبات (Breaches).
+- **Phone Tracker:** تحديد الدولة، المشغل، والتوقيت لأي رقم عالمي.
+- **IP Geo:** تحديد دقيق للموقع الجغرافي ومزود الخدمة لأي عنوان IP.
+- **Auto-Export:** حفظ جميع النتائج تلقائياً بصيغة JSON في مجلد `results/`.
 
 ---
 
-## التثبيت
+## 🚀 التثبيت والتشغيل
 
-### Linux / Mac
+### Termux (الأندرويد)
 ```bash
+pkg update && pkg install python git -y
 git clone https://github.com/mohmmadsedeg30-design/Information-gathering-Kizuna.git
 cd Information-gathering-Kizuna
 pip install -r requirements.txt --break-system-packages
+python kizuna_x.py
+```
+
+### Linux / Windows / Mac
+```bash
+git clone https://github.com/mohmmadsedeg30-design/Information-gathering-Kizuna.git
+cd Information-gathering-Kizuna
+pip install -r requirements.txt
 python3 kizuna_x.py
 ```
 
-### Termux (Android)
-```bash
-pkg update && pkg install python git
-git clone https://github.com/mohmmadsedeg30-design/Information-gathering-Kizuna.git
-cd Information-gathering-Kizuna
-pip install -r requirements.txt --break-system-packages
-python kizuna_x.py
-```
+---
 
-### Windows
-```bash
-git clone https://github.com/mohmmadsedeg30-design/Information-gathering-Kizuna.git
-cd Information-gathering-Kizuna
-pip install -r requirements.txt --break-system-packages
-python kizuna_x.py
-```
+## 🛠️ المتطلبات التقنية
+- **Python 3.9+**
+- **aiohttp:** للبحث المتزامن فائق السرعة.
+- **rich:** للواجهة الرسومية الاحترافية.
+- **pyfiglet:** لتوليد شعارات الهاكرز.
 
 ---
 
-## المتطلبات
+## ⚠️ تحذير قانوني
+هذه الأداة مخصصة للأغراض التعليمية واختبار الاختراق الأخلاقي فقط. المطور غير مسؤول عن أي استخدام غير قانوني.
 
-```
-requests
-phonenumbers
-dnspython
-email-validator
-rich
-python-whois
-python-dotenv
-```
-
-التثبيت اليدوي:
-```bash
-pip install requests phonenumbers dnspython email-validator rich python-whois python-dotenv --break-system-packages
-```
-
----
-
-## إعداد API Keys (اختياري)
-
-```bash
-cp .env.example .env
-```
-
-افتح `.env` وأضف مفاتيحك:
-
-| المتغير | الاستخدام | الرابط |
-|---------|-----------|--------|
-| `NUMVERIFY_API_KEY` | تفاصيل إضافية للهاتف | [numverify.com](https://numverify.com) |
-
-> الأداة تعمل بدون API keys — تضيفها فقط لمعلومات إضافية.
-
----
-
-## النتائج
-
-يتم حفظ النتائج تلقائياً في مجلد `results/` بصيغة JSON عند الاختيار.
-السجلات في `logs/kizuna.log`.
-
----
-
-## تحذير قانوني
-
-```
-هذه الأداة مخصصة للاستخدام التعليمي وعلى أنظمتك الخاصة فقط.
-المطور غير مسؤول عن أي استخدام غير مشروع.
-```
-
----
-
-## المتطلبات
-
-- Python 3.8+
-- اتصال بالإنترنت للوحدات التي تعتمد على APIs خارجية
+**Developed by: mohmmadsedeg30-design**
+**Powered by: KIZUNA Engine**
