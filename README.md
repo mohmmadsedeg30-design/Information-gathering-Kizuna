@@ -1,4 +1,4 @@
-# 💀 KIZUNA X — Advanced OSINT Framework v4.0 (HELL EDITION)
+# KIZUNA X — OSINT Framework
 
 ```
 ██╗  ██╗██╗███████╗██╗   ██╗███╗   ██╗ █████╗
@@ -7,54 +7,109 @@
 ██╔═██╗ ██║ ███╔╝  ██║   ██║██║╚██╗██║██╔══██║
 ██║  ██╗██║███████╗╚██████╔╝██║ ╚████║██║  ██║
 ╚═╝  ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝
-        HELL EDITION  ·  v4.0  ·  STAY SCARY
+        OSINT FRAMEWORK  ·  v2.0
 ```
 
-> **KIZUNA X** ليس مجرد أداة، بل هو وحش OSINT متكامل تم تطويره ليكون الأقوى في جمع المعلومات الاستخباراتية من المصادر المفتوحة.
+> أداة استطلاع وجمع معلومات مفتوحة المصدر مبنية بـ Python
 
 ---
 
-## 🧛 الميزات الجديدة في الإصدار 4.0
-- **Username Deep Scan:** محرك بحث متزامن (Asynchronous) يبحث في أكثر من 70 موقع تواصل اجتماعي ومنصة تقنية في ثوانٍ معدودة.
-- **Horror UI:** واجهة مستخدم مرعبة مع تأثيرات Matrix (أرقام خضراء) ونصوص متوهجة تشعرك بقوة الاختراق.
-- **Email Intel:** فحص عميق لسجلات MX وكشف التسريبات (Breaches).
-- **Phone Tracker:** تحديد الدولة، المشغل، والتوقيت لأي رقم عالمي.
-- **IP Geo:** تحديد دقيق للموقع الجغرافي ومزود الخدمة لأي عنوان IP.
-- **Auto-Export:** حفظ جميع النتائج تلقائياً بصيغة JSON في مجلد `results/`.
+## الوحدات
+
+| # | الوحدة | الوصف |
+|---|--------|-------|
+| 1 | 📱 Phone OSINT | تحليل أرقام الهاتف — الدولة، الشبكة، النوع، التوقيت |
+| 2 | 📧 Email OSINT | التحقق من الإيميل + سجلات MX / SPF / DMARC |
+| 3 | 🌐 Domain OSINT | WHOIS + سجلات DNS كاملة |
+| 4 | 🔍 IP OSINT | الموقع الجغرافي، ISP، ASN، Proxy Detection |
+| 5 | 🔌 Port Scanner | فحص المنافذ المفتوحة (على أنظمتك فقط) |
+| 6 | 🔑 Hash Tools | توليد ومقارنة الهاش (MD5, SHA1, SHA256…) |
+| 7 | 💻 System Info | معلومات الجهاز والـ IP المحلي والعام |
+| 8 | 📡 DNS Deep Scan | استعلام شامل لجميع أنواع سجلات DNS |
 
 ---
 
-## 🚀 التثبيت والتشغيل
+## التثبيت
 
-### Termux (الأندرويد)
+### Linux / Mac
 ```bash
-pkg update && pkg install python git -y
+git clone https://github.com/mohmmadsedeg30-design/Information-gathering-Kizuna.git
+cd Information-gathering-Kizuna
+pip install -r requirements.txt --break-system-packages
+python3 kizuna_x.py
+```
+
+### Termux (Android)
+```bash
+pkg update && pkg install python git
 git clone https://github.com/mohmmadsedeg30-design/Information-gathering-Kizuna.git
 cd Information-gathering-Kizuna
 pip install -r requirements.txt --break-system-packages
 python kizuna_x.py
 ```
 
-### Linux / Windows / Mac
+### Windows
 ```bash
 git clone https://github.com/mohmmadsedeg30-design/Information-gathering-Kizuna.git
 cd Information-gathering-Kizuna
-pip install -r requirements.txt
-python3 kizuna_x.py
+pip install -r requirements.txt --break-system-packages
+python kizuna_x.py
 ```
 
 ---
 
-## 🛠️ المتطلبات التقنية
-- **Python 3.9+**
-- **aiohttp:** للبحث المتزامن فائق السرعة.
-- **rich:** للواجهة الرسومية الاحترافية.
-- **pyfiglet:** لتوليد شعارات الهاكرز.
+## المتطلبات
+
+```
+requests
+phonenumbers
+dnspython
+email-validator
+rich
+python-whois
+python-dotenv
+```
+
+التثبيت اليدوي:
+```bash
+pip install requests phonenumbers dnspython email-validator rich python-whois python-dotenv --break-system-packages
+```
 
 ---
 
-## ⚠️ تحذير قانوني
-هذه الأداة مخصصة للأغراض التعليمية واختبار الاختراق الأخلاقي فقط. المطور غير مسؤول عن أي استخدام غير قانوني.
+## إعداد API Keys (اختياري)
 
-**Developed by: mohmmadsedeg30-design**
-**Powered by: KIZUNA Engine**
+```bash
+cp .env.example .env
+```
+
+افتح `.env` وأضف مفاتيحك:
+
+| المتغير | الاستخدام | الرابط |
+|---------|-----------|--------|
+| `NUMVERIFY_API_KEY` | تفاصيل إضافية للهاتف | [numverify.com](https://numverify.com) |
+
+> الأداة تعمل بدون API keys — تضيفها فقط لمعلومات إضافية.
+
+---
+
+## النتائج
+
+يتم حفظ النتائج تلقائياً في مجلد `results/` بصيغة JSON عند الاختيار.
+السجلات في `logs/kizuna.log`.
+
+---
+
+## تحذير قانوني
+
+```
+هذه الأداة مخصصة للاستخدام التعليمي وعلى أنظمتك الخاصة فقط.
+المطور غير مسؤول عن أي استخدام غير مشروع.
+```
+
+---
+
+## المتطلبات
+
+- Python 3.8+
+- اتصال بالإنترنت للوحدات التي تعتمد على APIs خارجية
